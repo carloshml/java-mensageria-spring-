@@ -1,5 +1,6 @@
 package com.microservice.user.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +25,7 @@ public class UserModel  implements Serializable{
 	
 	private String name;
 	
+	@Column(name = "email", unique = true)
 	private String email;
 	
 	public UserModel() {
