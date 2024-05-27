@@ -23,8 +23,8 @@ public class UserProducer {
 		var emailDto = new EmailRecordDto(
 				user.getId(), 
 				user.getEmail(), 
-				"Cadstro Realizado com Sucesso",
-				user.getName() + " seja bem vindo, seu cadstro foi  realizado com Sucesso!"
+				"Cadastro Realizado com Sucesso",
+				user.getName() + " seja bem vindo, seu cadastro foi  realizado com Sucesso!"
 				);
 		rabbitTemplate.convertAndSend("", routingKey, emailDto);
 
